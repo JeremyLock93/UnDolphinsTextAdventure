@@ -30,62 +30,7 @@ class Game:
     def __repr__(self):
         pass
     
-    def setup(self):
-        """Setup() creates the rooms for playing"""
-        bar = Room ("bar", """
-               A large open smokey bar, with several round tables
-               and stools. The smell of booze in the air, mixed
-               with the scent of cigerette smoke. It was hard to see
-               through the crowd of people but to the South,
-               the main enterance and exit leads to the hot arid
-               Desert Outside.
-               """, {"south": "Town Center"})
-               
-        townCenter = Room ("Town Center", """
-                         When going outside, the arid desert is hot and dry,
-                         There is not much civilization to the South. To
-                         The East there was a small gas station and travel
-                         guide of the town. To the West there appears to be 
-                         something in the distance, almost as if its was a mirage
-                         from your current position it looks as if its a lab?
-                                """, {"south": "Wilderness",
-                                      "north": "Bar",
-                                      "east": "Lab",
-                                      "west": "Gas  Station"})
- 
-                                  
-        wilderness = Room ("Wilderness", """
-                         When going outside, the arid desert is hot and dry,
-                         There is not much civilization to the South. To
-                         The East there was a small gas station and travel
-                         guide of the town. To the West there appears to be 
-                         something in the distance, almost as if its was a mirage
-                         from your current position it looks as if its a lab?
-                                """, {"north": "Town Center",
-                                      "east": "Gas Station",
-                                      "west": "Lab"})
-                        
-        lab = Room ("Lab", """
-               High rusty fence with a sign reading
-               Restricted Area come at your own risk.
-               Some of the fencing was bent over and you could
-               easily walk over. Back towards the West is the open wilderness.
-               """, {"west": "Town Center",
-                     "east": "Wilderness"})
-                    
-            
     
-                                
-                                
-                                
-        self.rooms = {bar.name: bar, 
-                townCenter.name:  townCenter,
-                wilderness.name:  wilderness,
-                lab.name: lab}
-        
-        self.here = bar #Starting room and where we will Meet UN Dolphins
-        self.here.describe #This is the describe function that will give
-        
         
     def loop(self):
             """ loop(): the main game loop.
