@@ -4,7 +4,7 @@
 
 #Testing with a different approach to the container class
 
-from item import Item
+from item import BaseItem
 
 class Container:
     """ This class only handles collections of Items. """
@@ -12,7 +12,7 @@ class Container:
     def __init__(self):
         self.contents = {}
         
-    def add(self, item):
+    def add(self, BaseItem):
         self.contents[item.name] = item
         
     def remove(self, item):
