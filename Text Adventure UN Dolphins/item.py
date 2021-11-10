@@ -1,6 +1,6 @@
 #This is the item class for creating items.
 
-class BaseItem:
+class Item:
     """
     Items are found in rooms, or in the player inventory.
     (Possibly we'll change that to being found in Container objects?)
@@ -51,12 +51,7 @@ class BaseItem:
             or not"""
         self._canDrop = setting
     
-class Item(BaseItem):
-    """This is the class that will inherit from the BaseItem"""
-    def __init__(self, name, description):
-        #Super is the override for equvilant functions.
-        super().__init__(name, description)
-        
+
 class ConsumableItem(Item):
     """This is the function that will inherit from the Item class, and 
         should have a limit to what it can do"""
